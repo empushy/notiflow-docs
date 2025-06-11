@@ -1,0 +1,62 @@
+{
+  "definitions": {},
+  "host": "api.notiflow.empushy.com",
+  "info": {
+    "contact": {
+      "email": "support@empushy.com",
+      "name": "Kieran Fraser",
+      "url": "https://empushy.com"
+    },
+    "description": "Social listening API for push notifications.",
+    "title": "NotiFlow API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/heatmap-data": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Heatmap data returned successfully",
+            "schema": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "properties": {
+                      "count": {
+                        "example": 23,
+                        "type": "integer"
+                      },
+                      "day": {
+                        "example": "Monday",
+                        "type": "string"
+                      },
+                      "hour": {
+                        "example": 14,
+                        "type": "integer"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "status": {
+                  "example": "ok",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "summary": "Retrieve heatmap data for notification delivery times.",
+        "tags": [
+          "Analytics"
+        ]
+      }
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0"
+}
